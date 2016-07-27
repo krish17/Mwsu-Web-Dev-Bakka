@@ -141,8 +141,8 @@
         myWait.show();
                 
         // Perform a get request to our api passing the page number and page size as parameters
-		console.log("http://mwsu-webdev.xyz/api/api.php/products?order="+sort+"&page=" + page + "," + page_size);
-        $.get("http://mwsu-webdev.xyz/api/api.php/products?order="+sort+order+"&page=" + page + "," + page_size)
+		console.log("http://198.199.67.218/api/api.php/products?order="+sort+"&page=" + page + "," + page_size);
+        $.get("http://198.199.67.218/api/api.php/products?order="+sort+order+"&page=" + page + "," + page_size)
 
         // The '.done' method fires when the get request completes
         .done(function(data) {
@@ -236,7 +236,7 @@
     }
     
     function getTotalPages(){
-        $.get("http://mwsu-webdev.xyz/api/api.php/products")
+        $.get("http://198.199.67.218/api/api.php/products")
 
         // The '.done' method fires when the get request completes
         .done(function(data) {
