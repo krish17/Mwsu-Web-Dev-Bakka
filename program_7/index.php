@@ -1,7 +1,4 @@
-<?php
-session_start();
-$sid = session_id();
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -95,7 +92,7 @@ $sid = session_id();
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
 							</div>
 							<div class="col-xs-6">
-								<button type="button" class="btn btn-primary btn-sm btn-block">
+								<button type="button" class="btn-primary btn-sm btn-block">
 									<span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 								</button>
 							</div>
@@ -112,7 +109,7 @@ $sid = session_id();
 								<h6 class="text-right">Added items?</h6>
 							</div>
 							<div class="col-xs-4">
-								<button type="button" class="btn btn-default btn-sm btn-block" id="updateCart">
+								<button type="button" class="btn-default btn-sm btn-block" id="updateCart23">
 									Update cart
 								</button>
 							</div>
@@ -125,7 +122,7 @@ $sid = session_id();
 							<h4 class="text-right">Total $<span id="cart-total">0.00</span></h4>
 						</div>
 						<div class="col-xs-4">
-							<button type="button" class="btn btn-success btn-block">
+							<button type="button" class="btn-success btn-block">
 								Checkout
 							</button>
 						</div>
@@ -280,7 +277,7 @@ $sid = session_id();
                 
         // Perform a get request to our api passing the page number and page size as parameters
 		//console.log("http://mwsu-webdev.xyz/api/api.php/products?order="+sort+"&page=" + page + "," + page_size);
-        $.get("http://mwsu-webdev.xyz/api/api.php/products?order="+sort+order+"&page=" + page + "," + page_size)
+        $.get("http://198.199.67.218/api/api.php/products?order="+sort+order+"&page=" + page + "," + page_size)
 
         // The '.done' method fires when the get request completes
         .done(function(data) {
@@ -354,14 +351,9 @@ $sid = session_id();
 
         });
     } // End .done
-	
-    $('.btn').click(function(){
-        var delbtn = document.getElementsByClassName("btn btn-link btn-xs");
-            console.log("clicked");        
-    });
     
     
-	$('#updateCart').click(function(){
+	$('#updateCart23').click(function(){
         var total = 0;
 		$('.cart-item').each(function(){
 			//console.log($(this).find('.price').text());
@@ -373,7 +365,7 @@ $sid = session_id();
 	});
     
     function getTotalPages(){
-        $.get("http://mwsu-webdev.xyz/api/api.php/products")
+        $.get("http://198.199.67.218/api/api.php/products")
 
         // The '.done' method fires when the get request completes
         .done(function(data) {
